@@ -35,7 +35,7 @@ async function handleDownload(req, res) {
 
     if (File.password != null) {
         if (req.body.password == null) {
-            res.render("password",{error: false})
+            res.render("password",{error: false,count: File.downloadCount})
             return
         }
         if (!await bcrypt.compare(req.body.password, File.password)) {

@@ -14,6 +14,6 @@ const file = new mongoose.Schema({
         required: true,
         default: 0
     },
-    createdAt: { type: Date, expires: '10m', default: Date.now }
+    createdAt: { type: Date, expires: '30m', default: Date.now }
 })
 module.exports = mongoose.model("file", file)
